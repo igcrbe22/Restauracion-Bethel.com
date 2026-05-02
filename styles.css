@@ -1062,15 +1062,35 @@ footer {
   .form-actions { gap: 0.5rem; }
 }
 
-/* ===== LOGO IMAGEN ===== */
+/* ===== LOGO IMAGEN CON ANIMACIÓN ===== */
 .nav-logo-img {
   width: 48px;
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  animation: pulseLogo 2s ease-in-out infinite;
 }
 
+/* Animación de pulso (grande-chico) */
+@keyframes pulseLogo {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+.nav-logo-img:hover {
+  animation: pulseLogoHover 0.6s ease-in-out;
+  box-shadow: 0 4px 15px rgba(91,175,214,0.4);
+}
+
+@keyframes pulseLogoHover {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
 /* ===== LOGO EN HERO ===== */
 .hero-logo-img {
   max-width: 400px;
