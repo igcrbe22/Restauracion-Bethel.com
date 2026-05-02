@@ -1088,24 +1088,21 @@ footer {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.25); }
 }
-/* ===== LOGO EN HERO ===== */
+/* ===== LOGO EN HERO - ACTUALIZADO ===== */
 .hero-logo-img {
   max-width: 400px;
   width: 100%;
+  aspect-ratio: 1 / 1; /* Obliga a que sea cuadrado para que el círculo se vea perfecto */
   height: auto;
-  animation: fadeInLogo 1.5s ease-in-out;
+  object-fit: cover; /* Ajusta la imagen para que no se deforme */
+  
+  /* Forma redonda */
+  border-radius: 50%; 
+  
+  /* Animación de pulso (igual que el navbar) */
+  animation: pulseLogo 2s ease-in-out infinite;
+  
   filter: drop-shadow(0 10px 30px rgba(91, 175, 214, 0.15));
-}
-
-@keyframes fadeInLogo {
-  from { 
-    opacity: 0; 
-    transform: scale(0.95) translateY(20px); 
-  }
-  to { 
-    opacity: 1; 
-    transform: scale(1) translateY(0); 
-  }
 }
 
 /* Responsive */
