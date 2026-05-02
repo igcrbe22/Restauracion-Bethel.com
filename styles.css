@@ -1062,7 +1062,7 @@ footer {
   .form-actions { gap: 0.5rem; }
 }
 
-/* ===== LOGO IMAGEN CON ANIMACIÓN ===== */
+/* ===== LOGO NAVBAR CON ANIMACIÓN ===== */
 .nav-logo-img {
   width: 48px;
   height: 48px;
@@ -1070,16 +1070,13 @@ footer {
   object-fit: cover;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   animation: pulseLogo 2s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
 }
 
-/* Animación de pulso (grande-chico) */
 @keyframes pulseLogo {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.15);
-  }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
 }
 
 .nav-logo-img:hover {
