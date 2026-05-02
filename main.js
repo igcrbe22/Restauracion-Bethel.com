@@ -138,7 +138,7 @@ function enviarWhatsApp() {
   var url = 'https://wa.me/' + WHATSAPP_NUM + '?text=' + encodeURIComponent(texto);
   window.open(url, '_blank');
   
-  mostrarNotificacion('📲 Abriendo WhatsApp... Completa el envío en la app', 'success');
+ mostrarNotificacion('✅ Mensaje listo para enviar por WhatsApp. ¡Gracias por contactarnos! 🕊️', 'success');
   
   setTimeout(function() {
     var form = document.getElementById('contactForm');
@@ -193,3 +193,18 @@ for (var i = 0; i < inputs.length; i++) {
     this.classList.remove('error');
   });
 }
+
+// ===== NOTIFICACIÓN AL CARGAR LA PÁGINA (PARA CONFIRMACIÓN DE ENVÍO) =====
+window.addEventListener('load', function() {
+  // Verificar si viene de un envío exitoso por email
+  var urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('enviado') === 'exito') {
+    mostrarNotificacion('✅ Mensaje enviado con éxito. Espera nuestra respuesta, ¡Dios te bendiga! 🕊️', 'success');
+    
+    // Limpiar la URL para que no se muestre de nuevo al recargar
+    if (window.history.replaceState) {
+      var cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+      window.history.replaceState({path: cleanUrl}, '', cleanUrl);
+    }
+  }
+});
