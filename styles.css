@@ -1112,10 +1112,18 @@ footer {
   height: auto;
   object-fit: cover; /* Ajusta la imagen para que no se deforme */
   
-  /* --- CAMBIO DE FORMA A CORAZÓN --- */
-  border-radius: 0; /* Aseguramos que no tenga esquinas redondas */
+ /* ===== LOGO EN HERO - FORMA DE CORAZÓN ===== */
+.hero-logo-img {
+  max-width: 400px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
   
-  /* Máscara en forma de corazón */
+  /* --- CAMBIO DE FORMA A CORAZÓN --- */
+  border-radius: 0; /* Quitamos el círculo */
+  
+  /* Aplicamos la máscara en forma de corazón */
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
   
@@ -1125,30 +1133,21 @@ footer {
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
-  /* ------------------------------- */
+  /* ------------------------------------ */
 
-  /* Animación de pulso (igual que el logo del menú) */
-  animation: pulseLogo 2s ease-in-out infinite; 
+  /* Animación de pulso (mismo efecto que el logo de arriba) */
+  animation: pulseLogo 2s ease-in-out infinite;
   
   filter: drop-shadow(0 10px 30px rgba(91, 175, 214, 0.15));
 }
+
 /* Responsive */
 @media (max-width: 1024px) {
-  .hero-logo-img {
-    max-width: 320px;
-  }
+  .hero-logo-img { max-width: 320px; }
 }
-
 @media (max-width: 768px) {
-  .hero-logo-img {
-    max-width: 280px;
-    margin: 0 auto;
-    display: block;
-  }
+  .hero-logo-img { max-width: 280px; margin: 0 auto; display: block; }
 }
-
 @media (max-width: 480px) {
-  .hero-logo-img {
-    max-width: 220px;
-  }
+  .hero-logo-img { max-width: 220px; }
 }
