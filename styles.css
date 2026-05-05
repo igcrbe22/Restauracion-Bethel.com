@@ -644,6 +644,14 @@ nav.scrolled {
   align-items: start;
 }
 
+/* 🟢 NUEVO: Mover formulario a la derecha */
+.contact-form-box {
+  order: 2;
+}
+.contact-wrap > div:not(.contact-form-box) {
+  order: 1;
+}
+
 .pastores-intro {
   color: var(--text-soft);
   line-height: 1.7;
@@ -1033,7 +1041,9 @@ footer {
   .hero-emblem { width: 220px; height: 220px; }
   .hero-title { font-size: 2.8rem; }
   .schedule-wrap { grid-template-columns: 1fr; }
-  .contact-wrap { grid-template-columns: 1fr; gap: 3rem; }  .location-wrap { grid-template-columns: 1fr; }
+  .contact-wrap { grid-template-columns: 1fr; gap: 3rem; }
+  .contact-form-box { order: 2; }
+  .contact-wrap > div:not(.contact-form-box) { order: 1; }
 }
 
 @media (max-width: 768px) {
