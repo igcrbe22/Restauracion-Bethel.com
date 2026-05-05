@@ -814,65 +814,23 @@ nav.scrolled {
 }
 
 /* ============================================
-   UBICACIÓN
-   ============================================ */
+UBICACIÓN - ACTUALIZADO (MAPA AL FINAL)
+============================================ */
 #ubicacion {
   background: linear-gradient(180deg, var(--bg), var(--bg-alt));
 }
 
-.location-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: start;
-}
-
-.location-map-placeholder {
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  padding: 3rem 2rem;
-  text-align: center;  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--bg-alt);
+.location-wrap-single {
+  max-width: 700px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 400px;
+  gap: 2rem;
 }
 
-.map-icon-bg {
-  width: 80px; height: 80px;
-  background: var(--bg);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.5rem;
+.location-details {
+  padding: 1rem 0;
 }
-
-.map-icon-bg svg {
-  width: 36px; height: 36px;
-  stroke: var(--sky);
-}
-
-.map-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: linear-gradient(135deg, var(--sky), var(--sky-dark));
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.85rem;
-  transition: var(--transition);
-  margin-top: 1rem;
-}
-
-.map-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(91,175,214,0.4); }
-
-.location-details { padding: 1rem 0; }
 
 .location-detail-item {
   display: flex;
@@ -880,7 +838,8 @@ nav.scrolled {
   gap: 1rem;
   padding: 1rem 1.25rem;
   background: var(--white);
-  border-radius: var(--radius);  margin-bottom: 0.75rem;
+  border-radius: var(--radius);
+  margin-bottom: 0.75rem;
   box-shadow: var(--shadow);
   border: 1px solid var(--bg-alt);
   transition: var(--transition);
@@ -918,6 +877,53 @@ nav.scrolled {
   color: var(--text-soft);
   line-height: 1.5;
 }
+
+/* Mapa al final */
+.location-map-placeholder {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--bg-alt);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.map-icon-bg {
+  width: 80px; height: 80px;
+  background: var(--bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.map-icon-bg svg {
+  width: 36px; height: 36px;
+  stroke: var(--sky);
+}
+
+.map-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--sky), var(--sky-dark));
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: var(--transition);
+  margin-top: 1rem;
+}
+
+.map-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(91,175,214,0.4); }
 
 /* ============================================
    FOOTER
